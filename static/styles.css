@@ -1,0 +1,243 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff4f4; /* Soft pink background */
+    color: #333;
+    text-align: center;
+}
+
+/* Container styling */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(90deg, #ff6b6b, #f06595); /* Romantic gradient */
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 5px 0 15px;
+    font-style: italic;
+}
+
+header .btn {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+header .btn:hover {
+    background-color: #f06595;
+}
+
+/* Form Section */
+form {
+    background-color: #fff;
+    border: 2px solid #f06595;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+form input,
+form select {
+    width: 65%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ff6b6b;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ff6b6b;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #f06595;
+}
+
+form button {
+    background-color: #ff6b6b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #f06595;
+}
+
+/* Success and Error Messages */
+.message-container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.message-container.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+
+.message-container.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}
+
+/* Footer Section (Optional) */
+footer {
+    background-color: #f06595;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Custom Images or Decorations */
+.heart-divider {
+    margin: 20px auto;
+    width: 100px;
+    height: 50px;
+    background: url('/static/heart-divider.png') no-repeat center;
+    background-size: contain;
+}
+
+/* Buttons with Icon */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem); /* Adjusts between 1.5rem and 3rem */
+}
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
+/* successs.html */
+.success-message {
+    margin-top: 20%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: inline-block;
+    width: 90%; /* Ensure it fits on smaller screens */
+    max-width: 500px;
+}
+@media (max-width: 600px) {
+    .success-message {
+        margin-top: 10%;
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+.success-message h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.success-message p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* Responsive Navigation */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #333;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar .menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar .menu {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        text-align: center;
+    }
+}

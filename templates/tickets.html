@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Buy Tickets</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Select Your Ticket(s)</h1>
+    <form method="POST" action="/tickets">
+        <label>Full Name:</label>
+        <input type="text" name="name" required>
+        <br>
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <br>
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" required>
+
+        <br>
+        <label for="ticketCategory">Ticket Category:</label>
+        <select name="ticket_category" id="ticketCategory" required>
+            <option value="Regular" data-price="50000">Regular - ₦50,000</option>
+            <option value="VIP" data-price="100000">VIP - ₦100,000</option>
+            <option value="Platinum" data-price="200000">Platinum - ₦200,000</option>
+            <option value="Table for 5" data-price="1000000">Table for 5 - ₦1,000,000</option>
+        </select>
+
+        <br>
+        <label>Quantity:</label>
+        <input type="number" name="quantity" id="quantity" value="0" min="1" required>
+
+        <br>
+        <p>Total Price: <span id="totalPrice">₦0,000</span></p>
+
+        <!-- Hidden input to pass the ticket price to the backend -->
+     <input type="hidden" id="ticketPrice" name="ticket_price" value="0">
+
+        <br>
+        <button type="submit">Proceed to Pay
+            <img src="/static/heart.png" alt="Heart Icon">
+        </button>
+    </form>
+    <script src="/static/main.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+</body>
+
+</html>
