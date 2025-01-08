@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect
 from utils.paystack import initialize_payment, verify_payment
 # from flask_cors import CORS
 
-app = Flask(__name__)
+# app = Flask(__name__)
 # CORS(app)  # Enable cross-origin requests
 
 app = Flask(__name__)
@@ -31,7 +31,6 @@ def tickets():
             return render_template('error.html', message="Payment initialization failed.")    
     return render_template('tickets.html')
 
-
 @app.route('/payment/success')
 def payment_success():
     reference = request.args.get('reference')
@@ -43,9 +42,6 @@ def payment_success():
         return render_template('error.html', message="Payment verification failed.")
 
 if __name__ == '__main__':
-    app.run(debug=True)
-else:
-    app.run(debug=True)
-
-port = int(os.environ.get('PORT', 10000))
-app.run(host='0.0.0.0', port=port)
+    port = int(os.environ.get('PORT', 10000))
+    app.run(host='35.160.120.126', port=port)
+    app.run(debug=False)

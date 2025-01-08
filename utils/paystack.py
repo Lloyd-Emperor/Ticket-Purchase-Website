@@ -3,7 +3,7 @@ import requests
 from config import PAYSTACK_SECRET_KEY
 
 BASE_URL = os.environ.get('BASE_URL')
-callback_url = f"{BASE_URL}/payment/success"
+# callback_url = f"{BASE_URL}/payment/success"
 
 def initialize_payment(email, amount, name, phone, quantity, ticket_type):
     if not isinstance(phone, str) or not phone.isdigit():
@@ -22,7 +22,7 @@ def initialize_payment(email, amount, name, phone, quantity, ticket_type):
         "currency": "NGN",
         # "callback_url": "https://bb96-197-211-59-71.ngrok-free.app/payment/success",
         # "callback_url": "http://127.0.0.1:5000/payment/success",
-        "callback_url": callback_url,
+        "callback_url": "https://ticketpurchasewebsite.onrender.com/payment/success",
         "metadata": {
              "custom_fields": [
                 {"display_name": "Full Name", "variable_name": "full_name", "value": name},
