@@ -2,7 +2,7 @@ import os
 import requests
 from config import PAYSTACK_SECRET_KEY
 
-BASE_URL = os.environ.get('BASE_URL', 'http://127.0.0.1:5000')
+BASE_URL = os.environ.get('https://ticketpurchasewebsite.onrender.com')
 callback_url = f"{BASE_URL}/payment/success"
 
 def initialize_payment(email, amount, name, phone, quantity, ticket_type):
