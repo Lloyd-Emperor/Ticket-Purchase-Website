@@ -42,6 +42,6 @@ def payment_success():
         return render_template('error.html', message="Payment verification failed.")
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 10000))
+    port = int(os.environ.get('PORT', 3000))
     app.run(host='35.160.120.126', port=port)
     app.run(debug=False)
