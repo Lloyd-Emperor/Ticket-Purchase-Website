@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, redirect
 from utils.paystack import initialize_payment, verify_payment
-from flask_cors import CORS
+# from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # Enable cross-origin requests
+# CORS(app)  # Enable cross-origin requests
 
 app = Flask(__name__)
 
