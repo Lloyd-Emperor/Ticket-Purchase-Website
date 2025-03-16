@@ -1,4 +1,4 @@
-# Lloyd Emperor Ticket Purchase Website
+# Event Ticket Purchase Website
 
 A modern and user-friendly ticket purchase platform designed to streamline ticket booking for events. This website offers a seamless experience for users to select ticket categories and complete payments securely.
 
