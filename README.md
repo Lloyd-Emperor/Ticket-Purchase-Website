@@ -31,13 +31,13 @@ A modern and user-friendly ticket purchase platform designed to streamline ticke
 ## Usage
 1. Start the server:
    ```bash
-   npm start
+   python app.py
    ```
 
 2. Open your browser and navigate to:
+   ```bash
+   http://localhost:3000
    ```
-http://localhost:3000
-```
 
 3. Follow the instructions to purchase tickets and complete payments.
 
