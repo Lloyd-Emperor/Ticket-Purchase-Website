@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Couples and Lovers Retreat – Ticketing Site
 
 Romantic-themed ticket purchase website for the Couples and Lovers Retreat. It provides a modern landing page, ticket purchase form with live pricing, and Paystack integration for payments.
@@ -133,28 +132,6 @@ Edit `templates/tickets.html` and adjust the `<option>` entries. Prices are read
 - Wrong redirect: Update `callback_url` to your current public domain or ngrok URL.
 - Prices not updating: Ensure your `<option>` elements include `data-price` and the IDs `ticketCategory`, `quantity`, and `totalPrice` exist in the form.
 
-### License
-Proprietary – for internal/event use. Replace with your preferred license if needed.
-
-=======
-# Event Ticket Purchase Website
-
-A modern and user-friendly ticket purchase platform designed to streamline ticket booking for events. This website offers a seamless experience for users to select ticket categories and complete payments securely.
-
-## Features
-- Easy ticket selection with multiple categories (Regular, VIP, Platinum, Table for 5)
-- Secure online payment integration with Paystack
-- Responsive and visually appealing design
-- Real-time ticket availability updates
-- User-friendly interface and smooth navigation
-- Automated email confirmation after successful payment
-
-## Technologies Used
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Flask
-- **Payment Gateway:** Paystack
-- **Deployment:** Render
-
 ## Installation
 1. Clone the repository:
    ```bash
@@ -186,4 +163,3 @@ This project is licensed under the MIT License.
 ## Contributions
 Contributions are welcome! Feel free to open issues and submit pull requests to enhance the platform.
 
->>>>>>> c18ac702f45399295895c7349b4fe26eb1ba147c
