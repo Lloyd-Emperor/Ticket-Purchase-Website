@@ -6,42 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Select Your Ticket(s)</h1>
-    <form method="POST" action="/tickets">
-        <label>Full Name:</label>
-        <input type="text" name="name" required>
-        <br>
-        <label>Email:</label>
-        <input type="email" name="email" required>
+    <header class="subpage-header">
+        <div class="container">
+            <h1>Secure Your Tickets</h1>
+            <p>Fill in your details and choose a category. See total in real-time.</p>
+        </div>
+    </header>
 
-        <br>
-        <label>Phone Number:</label>
-        <input type="tel" name="phone" required>
+    <main class="container section">
+        <form method="POST" action="/tickets" class="ticket-form">
+            <div class="form-row">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John & Jane Doe" required>
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-row">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="0801 234 5678" required>
+            </div>
 
-        <br>
-        <label for="ticketCategory">Ticket Category:</label>
-        <select name="ticket_category" id="ticketCategory" required>
-            <option value="Regular" data-price="50000">Regular - ₦50,000</option>
-            <option value="VIP" data-price="100000">VIP - ₦100,000</option>
-            <option value="Platinum" data-price="200000">Platinum - ₦200,000</option>
-            <option value="Table for 5" data-price="1000000">Table for 5 - ₦1,000,000</option>
-        </select>
+            <div class="form-grid">
+                <div class="form-row">
+                    <label for="ticketCategory">Ticket Category</label>
+                    <select name="ticket_category" id="ticketCategory" required>
+                        <option value="Regular" data-price="50000">Regular - ₦50,000</option>
+                        <option value="VIP" data-price="100000">VIP - ₦100,000</option>
+                        <option value="Platinum" data-price="200000">Platinum - ₦200,000</option>
+                        <option value="Table for 5" data-price="1000000">Table for 5 - ₦1,000,000</option>
+                    </select>
+                </div>
 
-        <br>
-        <label>Quantity:</label>
-        <input type="number" name="quantity" id="quantity" value="0" min="1" required>
+                <div class="form-row">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" name="quantity" id="quantity" value="1" min="1" required>
+                </div>
+            </div>
 
-        <br>
-        <p>Total Price: <span id="totalPrice">₦0,000</span></p>
+            <div class="total-row">
+                <p class="total">Total Price: <span id="totalPrice">₦0</span></p>
+                <input type="hidden" id="ticketPrice" name="ticket_price" value="0">
+            </div>
 
-        <!-- Hidden input to pass the ticket price to the backend -->
-     <input type="hidden" id="ticketPrice" name="ticket_price" value="0">
+            <div class="cta-buttons">
+                <button type="submit" class="btn btn-primary btn-icon">
+                    <span>Proceed to Pay</span>
+                    <img src="/static/heart.png" alt="Heart Icon">
+                </button>
+            </div>
+        </form>
+    </main>
 
-        <br>
-        <button type="submit">Proceed to Pay
-            <img src="/static/heart.png" alt="Heart Icon">
-        </button>
-    </form>
+    <button id="back-to-top" aria-label="Back to top">↑</button>
     <script src="/static/main.js"></script>
     <script src="https://js.paystack.co/v1/inline.js"></script>
 </body>

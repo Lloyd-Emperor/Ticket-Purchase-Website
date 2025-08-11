@@ -17,7 +17,7 @@ body {
 
 /* Header Section */
 header {
-    background: linear-gradient(90deg, #ff6b6b, #f06595); /* Romantic gradient */
+    background: linear-gradient(90deg, #ff6b6b, #f06595);
     color: white;
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -217,8 +217,10 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 15px;
-    background-color: #333;
+    background: linear-gradient(90deg, #ff6b6b, #f06595);
+    color: white;
 }
 
 .navbar a {
@@ -240,4 +242,156 @@ h1 {
         display: block;
         text-align: center;
     }
+}
+
+/* New Landing Page Styles */
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.brand-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.nav-links a {
+    margin: 0 6px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(240, 101, 149, 0.35);
+}
+
+.btn:hover {
+    background-color: #f06595;
+}
+
+.btn-sm {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+}
+
+.btn-light {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.35);
+}
+
+.btn-primary {
+    background-color: #ff6b6b;
+}
+
+.hero {
+    background: radial-gradient(1000px 400px at 50% -200px, rgba(240,101,149,0.25), transparent), #fff4f4;
+    padding: 60px 0 40px;
+}
+
+.hero-inner h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin: 0 0 6px 0;
+}
+
+.hero-inner .subtitle {
+    max-width: 700px;
+    margin: 0 auto 16px;
+}
+
+.event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 14px 0 18px;
+}
+
+.pill {
+    background: white;
+    border: 1px solid #ffd1e1;
+    color: #cc3a6a;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.section {
+    padding: 30px 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.card.feature-card {
+    background: white;
+    border: 1px solid #ffd1e1;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 20px rgba(240, 101, 149, 0.15);
+}
+
+.subpage-header {
+    background: linear-gradient(90deg, #ff6b6b, #f06595);
+    color: white;
+    padding: 36px 0 28px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.ticket-form .form-row {
+    text-align: left;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+}
+
+.total-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.total {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #cc3a6a;
+}
+
+#back-to-top {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    display: none;
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(240, 101, 149, 0.35);
+}
+
+#back-to-top:hover {
+    background: #f06595;
 }

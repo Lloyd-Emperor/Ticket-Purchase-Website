@@ -4,16 +4,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Couples and Lovers Retreat</title>
     <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preload" href="/static/heart-rate.png" as="image">
+    <link rel="preload" href="/static/heart.png" as="image">
+    <meta name="description" content="Join us for an unforgettable evening of love and connection at the Couples and Lovers Retreat.">
 </head>
 <body>
-    <header>
-        <h1>Couples and Lovers Retreat</h1>
-    <p>Join us for an unforgettable evening of love and connection!</p>
-        <p>Date: January 20, 2025 | Location: Tanscorp Hilton Hotel, Abuja.</p>
-        <a href="/tickets" class="btn">Buy Tickets
-            <img src="/static/heart.png" alt="Heart Icon">
-        </a>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <div class="brand">
+                <img class="brand-icon" src="/static/heart.png" alt="Heart">
+                <span>Couples & Lovers Retreat</span>
+            </div>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="#about">About</a>
+                <a href="#highlights">Highlights</a>
+                <a href="#tickets" class="btn btn-sm btn-light">Buy Tickets</a>
+            </nav>
+        </div>
     </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <h1>Couples and Lovers Retreat</h1>
+                <p class="subtitle">An intimate evening designed to rekindle love, deepen connection, and create lasting memories.</p>
+                <div class="event-meta">
+                    <span class="pill">January 20, 2025</span>
+                    <span class="pill">Transcorp Hilton Hotel, Abuja</span>
+                </div>
+                <div class="cta-buttons">
+                    <a href="/tickets" class="btn btn-primary btn-icon">
+                        <span>Buy Tickets</span>
+                        <img src="/static/heart.png" alt="Heart Icon"/>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="heart-divider" aria-hidden="true"></div>
+
+        <section id="about" class="container section">
+            <h2>About the Event</h2>
+            <p>Celebrate love in a romantic ambience with live music, fine dining, and curated activities for couples. Whether you are newly in love or celebrating decades together, this retreat promises a magical experience.</p>
+        </section>
+
+        <section id="highlights" class="container section">
+            <h2>Evening Highlights</h2>
+            <div class="feature-grid">
+                <div class="card feature-card">
+                    <h3>Live Music</h3>
+                    <p>Soulful performances to set the perfect mood.</p>
+                </div>
+                <div class="card feature-card">
+                    <h3>Fine Dining</h3>
+                    <p>A carefully crafted menu to delight your senses.</p>
+                </div>
+                <div class="card feature-card">
+                    <h3>Couples Activities</h3>
+                    <p>Fun, engaging sessions to strengthen your bond.</p>
+                </div>
+                <div class="card feature-card">
+                    <h3>Photo Moments</h3>
+                    <p>Capture timeless memories in beautiful settings.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tickets" class="container section">
+            <h2>Secure Your Spot</h2>
+            <p>Limited seats available. Choose your preferred ticket category and join us for an unforgettable night.</p>
+            <a href="/tickets" class="btn btn-primary btn-icon">
+                <span>Proceed to Tickets</span>
+                <img src="/static/heart.png" alt="Heart Icon"/>
+            </a>
+        </section>
+    </main>
+
+    <button id="back-to-top" aria-label="Back to top">↑</button>
     <script src="/static/main.js"></script>
-</body>
-</html>
+    </body>
+    </html>
